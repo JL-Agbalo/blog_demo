@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :posts
+  # When user account has been deleted, all the comments will be deleted
+  has_many :comments, dependent: :destroy
 end
