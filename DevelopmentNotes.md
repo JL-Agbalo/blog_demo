@@ -9,3 +9,6 @@ Controller: A controller with CRUD actions to manage Post resources.
 Views: Default views to display and manipulate Post data.
 Migration: A migration file to create the posts table with title and body.
 Routes: Automatically configured routes for Post actions.
+
+device gem
+https://github.com/heartcombo/devise
