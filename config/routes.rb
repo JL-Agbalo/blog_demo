@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'user/sessions',
-                                    registrations: 'user/registrations' }     
+  get "users/profile"
+  devise_for :users, controllers: { sessions: 'users/sessions',
+                                    registrations: 'users/registrations' }     
   resources :posts
   root "pages#home"
   get "about", to: 'pages#about'
+  get '/u/:id', to: 'users#profile', as: 'user'
+  
   # get "home", to: 'pages#home'
   # get "pages/about"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
