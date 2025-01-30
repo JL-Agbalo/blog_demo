@@ -12,3 +12,6 @@ Routes: Automatically configured routes for Post actions.
 
 device gem
 https://github.com/heartcombo/devise
+
+Realtime Updates
+https://www.youtube.com/watch?v=UvTLumcEMgU&list=PL3mtAHT_eRex1sJI2uoTBgFT3qAXFbEcy
