@@ -4,4 +4,6 @@ class Post < ApplicationRecord
   belongs_to :user
   # If i delete post it will delete all the comments on it
   has_many :comments, dependent: :destroy
+  has_noticed_notifications model: "Notification"
+  has_many :notifications, through: :user, dependent: :destroy
 end
