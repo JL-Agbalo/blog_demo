@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: %i[ index show ]
   # GET /posts or /posts.json
+
+
+
   def index
     @posts = Post.all.order(created_at: :desc)
   end
