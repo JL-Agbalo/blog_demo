@@ -22,4 +22,14 @@ class CommentNotifier < ApplicationNotifier
   #
   # required_param :message
   deliver_by :database
+
+  def message
+    @post = Post.find(params[:comment][:post_id])
+    @comment = Comment.find(params[:comment][:id])  
+    "#{@user.email} commented on #{@post.title.truncate_words(10)}"
+  end 
+
+  def url
+    post_path(Post.find(params[:comment][:post_id]))
+  end
 end
