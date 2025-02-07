@@ -65,4 +65,4 @@ end
 gem 'devise'
 gem "noticed", "~> 2.6"
 
-gem "ransack", "~> 4.2"
+gem "ransack", "~> 4.3"
